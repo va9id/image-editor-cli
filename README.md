@@ -43,7 +43,7 @@ python3 __main__.py
 	$ : L
 	$ Enter the name of an image file: dog1.jpg
 	```
-- If the image exists, it will be previewed to you. ![Image](https://github.com/vahido9/cli-image-editor/images/dog1.jpg "Loaded Image"). **Close the preview to continue**
+- If the image exists, it will be previewed to you. ![Image](https://github.com/vahido9/cli-image-editor/blob/main/images/dog1.jpg "Loaded Image"). **Close the preview to continue**
 - Apply the desired filter on your image: 
 	```powershell
 	$ : X
