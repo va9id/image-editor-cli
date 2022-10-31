@@ -1,4 +1,4 @@
-from Cimpl import choose_file, load_image, copy, create_color, set_color,\
+from image_functionality import choose_file, load_image, copy, create_color, set_color,\
                   show, Image, get_color
 
 def invert(image: Image) -> Image:

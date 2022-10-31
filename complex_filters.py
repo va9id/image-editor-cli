@@ -1,4 +1,4 @@
-from Cimpl import get_height, get_width, copy, get_color, set_color, create_color, create_image
+from image_functionality import get_height, get_width, copy, get_color, set_color, create_color, create_image
 from simple_filters import grayscale
 
 def red_channel(img):

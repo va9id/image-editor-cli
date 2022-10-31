@@ -1,4 +1,4 @@
-from Cimpl import load_image, save_as, show
+from image_functionality import load_image, save_as, show
 from complex_filters import * 
 
 

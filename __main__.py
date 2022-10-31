@@ -6,8 +6,7 @@ if __name__ == "__main__":
     run_program = True 
     stop_program = False
 
-    print("\nWelcome to team 79's image filter software.")
-    print("Below are the following commands. Please choose one and begin!\n")
+    print("Below are the following commands. Please choose one and begin!")
 
     while run_program:
         cmd = get_input()
