@@ -12,7 +12,7 @@ This application allows you to apply up to 9 filters to your image of choice. Ea
 		```	
 	- Windows installation: 
 		```powershell
-		C:> py -m ensurepip --upgrade
+		py -m ensurepip --upgrade
 		```
 - Pillow 
 	```powershell
