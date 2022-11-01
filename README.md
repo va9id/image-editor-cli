@@ -1,6 +1,6 @@
 # Command Line Image Editor
 ## About the Project
-This application allows you to apply up to 9 filters to your image of choice. Each filter modifies the inputted image's pixels and then returns a copy of the filtered image which you can save. This project was developed by me, Vahid in 2019.
+This application allows you to apply up to 9 filters to your image of choice. Each filter modifies the inputted image's pixels and then returns a copy of the filtered image which you can save. This project was developed in Python by me, Vahid in 2019.
 
 ## Getting Started
 ### Prerequisites 
