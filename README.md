@@ -27,16 +27,17 @@ git clone https://github.com/vahido9/cli-image-editor.git
 2. Add any desired pictures you wish to edit in the `/images` directory. 
 ### Usage
 The **cli-image-editor** can be run in one of two ways.
-1. Execute `__main__.py`
+1. Execute `main.py`
 ```powershell
-python3 __main__.py
+python3 main.py
 ```
 - You will be shown a prompt of all the program's commands: 
 	```
-	L)oad image S)ave-as
-	2)-tone    3)-tone   X)treme contrast   T)int sepia   P)osterize
-	E)dge detect    I)mproved edge detect   V)ertical flip   H)orizontal flip
-	Q)uit
+	----------------------------    
+	L)oad image	S)ave-as	Q)uit    
+	2)-tone	3)-tone	X)treme contrast	T)int sepia	P)osterize    
+	E)dge detect	I)mproved edge detect	V)ertical flip	H)orizontal flip    
+	----------------------------
 	```
 - Begin by loading an image with its file extension into the program by entering the **L**oad command.
 	```powershell
@@ -55,7 +56,7 @@ python3 __main__.py
 - - - - - 
 2. Using the batch script
 ```
-python3 run_batch.py
+python3 batch.py
 ```
 - The batch script can be found under **/batch/batch_script.txt** and is modifiable.
 - The syntax of the script is shown in the following table and example: 
