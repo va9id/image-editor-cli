@@ -1,3 +1,5 @@
+import os 
+
 from image_functionality import load_image, save_as, show
 from filters import * 
 
@@ -10,13 +12,16 @@ def get_input() -> str:
         return cmd
 
 def load(image): 
-    image = load_image(input("Enter the name of an image file: "))
+    filename = choose_file()
+    filename = os.path.basename(filename)
+    #filename = input("Enter the name of an image file: ")
+    image = load_image(filename)
     show(image)   
     if image == None: 
         print("Please load an image before applying a filter") 
     return image 
     
-def save(image) -> None:
+def save(image):
     if image == None:
         print("No image to save") 
     else:

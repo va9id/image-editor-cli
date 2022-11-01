@@ -1,6 +1,6 @@
 # Command Line Image Editor
 ## About the Project
-This application allows you to apply up to 9 filters to your image of choice. Each filter modifies the inputted image's pixels and then returns a copy of the filtered image which you can save. This project was developed in Python by me, Vahid in 2019.
+This application allows you to apply up to 9 filters to your image of choice. Each filter modifies the inputted image's pixels and then returns a copy of the filtered image which you can save. This Python project was originally developed by me in 2019 and was recently refactored in 2022.
 
 ## Getting Started
 ### Prerequisites 
@@ -39,12 +39,7 @@ python3 main.py
 	E)dge detect	I)mproved edge detect	V)ertical flip	H)orizontal flip    
 	----------------------------
 	```
-- Begin by loading an image with its file extension into the program by entering the **L**oad command.
-	```powershell
-	$ : L
-	$ Enter the name of an image file: dog1.jpg
-	```
-- If the image exists, it will be previewed to you. **Close the preview to continue** 
+- Begin by loading an image with the **L**oad command. It will prompt you to choose an image from a dialog box. The image you choose will be previewed to you. **Close the preview to continue**
 ![Image](https://github.com/vahido9/cli-image-editor/blob/main/images/dog1.jpg "Loaded Image"). 
 - Apply the desired filter on your image: 
 	```powershell
