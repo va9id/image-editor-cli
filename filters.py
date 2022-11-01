@@ -1,6 +1,5 @@
 from flask import g
 from image_functionality import *
-from simple_filters import grayscale
 
 COLOURS = {
     "black": (0, 0, 0),
@@ -64,7 +63,7 @@ def two_tone(image, colour1, colour2):
         x, y, (r, g, b) = pixel 
         brightness = (r+g+b) // 3
         if 0 <= brightness <= 127: 
-            set_color (filtered_img, x, y, new_colour1)   
+            set_color(filtered_img, x, y, new_colour1)   
         elif 128 <= brightness <= 255: 
             set_color(filtered_img, x, y, new_colour2) 
     return filtered_img
@@ -91,16 +90,12 @@ def three_tone(image, colour1, colour2, colour3):
 
 def extreme_contrast(img):
     filtered_img = copy(img)
-    r, g, b = 0, 0, 0 
     for h in range(0, get_height(img)):
         for w in range(0, get_width(img)):
             color = get_color(img, w , h)
-            if color[0] >= 128 and color[0] <= 255:
-                r = 255
-            if color[1] >= 128 and color[1] <= 255:
-                g = 255
-            if color[2] >= 128 and color[2] <= 255:
-                b = 255
+            r = 255 if 0 <= color[0] <= 127 else 0
+            g = 255 if 0 <= color[1] <= 127 else 0
+            b = 255 if 0 <= color[2] <= 127 else 0
             set_color(filtered_img , w, h, create_color(r, g, b))
     return filtered_img
     
@@ -165,7 +160,7 @@ def detect_edges_better(img, threshold):
     filtered_img = copy(img)
     height = get_height(img)
     width = get_width(img)
-    set_color(filtered_img,  width - 1, height, create_color(255, 255, 255))
+    set_color(filtered_img,  width - 1, height - 1, create_color(255, 255, 255))
     for h in range(0, height - 1):
         for w in range(0, width):
             color1 = get_color(img, w, h)
@@ -206,3 +201,39 @@ def flip_horizontal(image):
             color = get_color(image, w, h)
             set_color(filtered_image, w, get_height(image) - 1 - h, color)    
     return filtered_image
+
+def invert(img):
+    filtered_img = copy(img)
+    for w, h, (r, g, b) in img:
+        color = create_color(255 - r, 255 - g, 255 - b)
+        set_color(filtered_img, w, h, color)
+    return filtered_img
+
+def grayscale_from_red(img):
+    filtered_img = copy(img)
+    for w, h, (r, g, b) in img:
+        color = create_color(r, r, r)
+        set_color(filtered_img, w, h, color)       
+    return filtered_img
+        
+def grayscale_from_green(img):
+    filtered_img = copy(img)
+    for w, h, (r, g, b) in img:
+        color = create_color(g, g, g)    
+        set_color(filtered_img, w, h, color)       
+    return filtered_img
+
+def grayscale_from_blue(img):
+    filtered_img = copy(img)
+    for w, h, (r, g, b) in img:
+        color = create_color(b, b, b)      
+        set_color(filtered_img, w, h, color)        
+    return filtered_img
+
+def grayscale(img):
+    filtered_img = copy(img)
+    for w, h, (r, g, b) in img:
+        brightness = (r + g + b) // 3
+        color = create_color(brightness, brightness, brightness)
+        set_color(filtered_img, w, h, color)      
+    return filtered_img
