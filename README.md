@@ -1,34 +1,26 @@
 # Command Line Image Editor
-## About the Project
-This application allows you to apply up to 9 filters to your image of choice. Each filter modifies the inputted image's pixels and then returns a copy of the filtered image which you can save. This Python project was originally developed by me in 2019 and was recently refactored in 2022.
+Apply up to 9 filters to an image of choice. Filters modify image pixels, returning a copy of the filtered image which can be saved.
 
-## Getting Started
-### Prerequisites 
-- Python3 or later
+## Prerequisites 
+- [Python3+](https://www.python.org/downloads/)
 - pip 20.0.2 or later
 	- Unix installation:
-		```powershell 
+		```powershell
 		python -m ensurepip --upgrade
 		```	
 	- Windows installation: 
 		```powershell
 		py -m ensurepip --upgrade
 		```
-- Pillow 
+- [Pillow](https://pypi.org/project/Pillow/)
 	```powershell
 	python3 -m pip install --upgrade pip
 	python3 -m pip install --upgrade Pillow
 	```
-### Installation
-1. Clone the repo.
-```
-git clone https://github.com/vahido9/cli-image-editor.git
-```
-2. Add any desired pictures you wish to edit in the `/images` directory. 
-### Usage
-The **cli-image-editor** can be run in one of two ways.
-1. Execute `main.py`
-```powershell
+## Usage
+- Add desired images to `images` directory
+- Execute the main program with the following command: 
+```bash
 python3 main.py
 ```
 - You will be shown a prompt of all the program's commands: 
@@ -39,22 +31,16 @@ python3 main.py
 	E)dge detect	I)mproved edge detect	V)ertical flip	H)orizontal flip    
 	----------------------------
 	```
-- Begin by loading an image with the **L**oad command. It will prompt you to choose an image from a dialog box. The image you choose will be previewed to you. **Close the preview to continue**
+- Begin by loading an image with the **L**oad command. The image you choose will be previewed to you. **Close the preview to continue**
 ![Image](https://github.com/vahido9/cli-image-editor/blob/main/images/dog1.jpg "Loaded Image"). 
-- Apply the desired filter on your image: 
-	```powershell
-	$ : X
-	```
+- Apply desired filter(s) to the image image: 
 - The filtered image then pops up:   
 ![Filtered Image](https://github.com/vahido9/cli-image-editor/blob/main/images/extremeContractDog1.jpg "Filtered Image")
 - You can continue applying more filters or save your filtered image in your destination of choice.
-- - - - - 
-2. Using the batch script
-```
-python3 batch.py
-```
-- The batch script can be found under **/batch/batch_script.txt** and is modifiable.
-- The syntax of the script is shown in the following table and example: 
+
+### Alternative - Bash script
+- Batch script is under `/batch/batch_script.txt` andcan be modified: 
+	- The syntax of the script is shown in the following table and example: 
 
 Image name | Name to Save Image As | Filter code(s)
 -----------|-----------------------|--------------
